@@ -1,4 +1,29 @@
+/* eslint-disable @next/next/no-img-element -- Native assets keep the Sites build portable; every image is sized, compressed, and deferred where appropriate. */
+
 const Arrow = () => <span aria-hidden="true">↗</span>;
+
+const personJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Jeroen Sakkers",
+  url: "https://victormundi.com",
+  image: "https://victormundi.com/jeroen.png",
+  jobTitle: "Founder & CEO of HireData",
+  homeLocation: {
+    "@type": "Place",
+    name: "Amsterdam, The Netherlands",
+  },
+  worksFor: {
+    "@type": "Organization",
+    name: "HireData",
+    url: "https://www.hiredata.com/",
+  },
+  sameAs: [
+    "https://www.linkedin.com/in/victormundi/",
+    "https://twitter.com/victormundi",
+    "https://github.com/victormundi",
+  ],
+};
 
 function ProjectMeta({ children }: { children: React.ReactNode }) {
   return <span className="project-meta">{children}</span>;
@@ -16,7 +41,14 @@ function HireDataVisual() {
           <span />
           <div className="browser-address">hiredata.com</div>
         </div>
-        <img src="/work/hiredata.png" alt="" />
+        <img
+          src="/work/hiredata-current.jpg"
+          alt=""
+          width="1440"
+          height="900"
+          loading="lazy"
+          decoding="async"
+        />
       </div>
       <div className="floating-label floating-label-top">AI + ATS</div>
       <div className="floating-label floating-label-bottom">
@@ -30,14 +62,28 @@ function SolVisual() {
   return (
     <div className="project-visual sol-visual" aria-hidden="true">
       <div className="coach-label rafa-label">
-        <img src="/work/rafa-icon.png" alt="" />
+        <img
+          src="/work/rafa-icon.png"
+          alt=""
+          width="160"
+          height="160"
+          loading="lazy"
+          decoding="async"
+        />
         <span>
           <strong>Rafa</strong>
           European Spanish
         </span>
       </div>
       <div className="coach-label hans-label">
-        <img src="/work/hans-icon.png" alt="" />
+        <img
+          src="/work/hans-icon.png"
+          alt=""
+          width="160"
+          height="160"
+          loading="lazy"
+          decoding="async"
+        />
         <span>
           <strong>Hans</strong>
           Everyday Dutch
@@ -45,11 +91,25 @@ function SolVisual() {
       </div>
       <div className="phone phone-rafa">
         <div className="phone-speaker" />
-        <img src="/work/rafa-onboarding.png" alt="" />
+        <img
+          src="/work/rafa-onboarding.jpg"
+          alt=""
+          width="644"
+          height="1400"
+          loading="lazy"
+          decoding="async"
+        />
       </div>
       <div className="phone phone-hans">
         <div className="phone-speaker" />
-        <img src="/work/hans-home.png" alt="" />
+        <img
+          src="/work/hans-home.jpg"
+          alt=""
+          width="644"
+          height="1400"
+          loading="lazy"
+          decoding="async"
+        />
       </div>
     </div>
   );
@@ -65,7 +125,14 @@ function FirstNamesVisual() {
           <span />
           <span />
         </div>
-        <img src="/work/first-names-home.png" alt="" />
+        <img
+          src="/work/first-names-home.png"
+          alt=""
+          width="1440"
+          height="1000"
+          loading="lazy"
+          decoding="async"
+        />
       </div>
       <div className="browser-window first-names-window first-recall">
         <div className="browser-bar light-bar">
@@ -73,10 +140,24 @@ function FirstNamesVisual() {
           <span />
           <span />
         </div>
-        <img src="/work/first-names-recall.png" alt="" />
+        <img
+          src="/work/first-names-recall.png"
+          alt=""
+          width="1440"
+          height="1000"
+          loading="lazy"
+          decoding="async"
+        />
       </div>
       <div className="first-names-mark">
-        <img src="/work/first-names-icon.png" alt="" />
+        <img
+          src="/work/first-names-icon.png"
+          alt=""
+          width="160"
+          height="160"
+          loading="lazy"
+          decoding="async"
+        />
       </div>
       <p className="visual-note">Three names. Once a week.</p>
     </div>
@@ -86,7 +167,15 @@ function FirstNamesVisual() {
 function YetVisual() {
   return (
     <div className="project-visual yet-visual" aria-hidden="true">
-      <img className="yet-app-icon" src="/work/yet-icon.png" alt="" />
+      <img
+        className="yet-app-icon"
+        src="/work/yet-icon.png"
+        alt=""
+        width="160"
+        height="160"
+        loading="lazy"
+        decoding="async"
+      />
       <div className="yet-phone">
         <div className="yet-topline">
           <strong>yet.</strong>
@@ -141,7 +230,14 @@ function EvaVisual() {
       <div className="eva-console">
         <div className="eva-sidebar">
           <div className="eva-person">
-            <img src="/work/eva.png" alt="" />
+            <img
+              src="/work/eva.png"
+              alt=""
+              width="160"
+              height="160"
+              loading="lazy"
+              decoding="async"
+            />
             <div>
               <strong>Eva</strong>
               <span>AI operations</span>
@@ -210,6 +306,10 @@ export default function Home() {
       <a className="skip-link" href="#main">
         Skip to content
       </a>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+      />
 
       <header className="site-header">
         <a className="wordmark" href="#top" aria-label="Jeroen Sakkers, home">
@@ -228,7 +328,7 @@ export default function Home() {
 
       <main id="main">
         <section className="hero" id="top">
-          <div className="hero-copy">
+          <div className="hero-lead">
             <p className="eyebrow">
               <span /> Founder &amp; product builder · Amsterdam
             </p>
@@ -237,13 +337,52 @@ export default function Home() {
               <strong>Improve Every Day</strong>
             </p>
             <h1>
-              Better systems.
+              <span>Better systems.</span>
               <em>More human work.</em>
             </h1>
+          </div>
+
+          <a
+            className="hero-card"
+            href="#about"
+            aria-label="Read about Jeroen Sakkers"
+          >
+            <div className="hero-card-top">
+              <span>PROFILE / 2026</span>
+              <span className="availability-dot">Amsterdam</span>
+            </div>
+            <div className="portrait-wrap">
+              <img
+                src="/jeroen.png"
+                alt="Jeroen Sakkers"
+                width="300"
+                height="300"
+                decoding="async"
+              />
+              <div className="portrait-stamp">JS</div>
+            </div>
+            <div className="hero-card-name">
+              <div>
+                <strong>Jeroen Sakkers</strong>
+                <span>Founder · Product · Automation</span>
+                <small>Building products since 2009</small>
+              </div>
+              <span className="card-arrow" aria-hidden="true">↗</span>
+            </div>
+            <div className="hero-card-current">
+              <span>NOW BUILDING</span>
+              <p>
+                Practical AI that helps recruitment teams communicate personally
+                and spend more time with people.
+              </p>
+            </div>
+          </a>
+
+          <div className="hero-support">
             <p className="hero-intro">
-              I&apos;m Jeroen Sakkers, an Amsterdam entrepreneur and founder of
-              HireData. I build companies and products around a simple personal
-              mission: Improve Every Day and have a positive impact.
+              I&apos;m an Amsterdam entrepreneur and founder of HireData. I build
+              practical AI and thoughtful products that help people do better
+              work—and I try to improve every day.
             </p>
             <div className="hero-actions">
               <a className="button button-dark" href="#work">
@@ -257,42 +396,14 @@ export default function Home() {
               </a>
             </div>
           </div>
-
-          <aside className="hero-card" aria-label="About Jeroen">
-            <div className="hero-card-top">
-              <span>PROFILE / 2026</span>
-              <span className="availability-dot">Amsterdam</span>
-            </div>
-            <div className="portrait-wrap">
-              <img src="/jeroen.png" alt="Jeroen Sakkers" />
-              <div className="portrait-stamp">JS</div>
-            </div>
-            <div className="hero-card-name">
-              <div>
-                <strong>Jeroen Sakkers</strong>
-                <span>Founder · Product · Automation</span>
-              </div>
-              <span className="card-arrow">↗</span>
-            </div>
-            <div className="hero-card-current">
-              <span>NOW BUILDING</span>
-              <p>
-                Practical AI that helps recruitment teams communicate personally
-                and spend more time with people.
-              </p>
-            </div>
-          </aside>
         </section>
 
-        <div className="capabilities" aria-label="Areas of focus">
-          <span>Entrepreneurship</span>
-          <i>•</i>
-          <span>Listening first</span>
-          <i>•</i>
-          <span>AI &amp; automation</span>
-          <i>•</i>
-          <span>Positive impact</span>
-        </div>
+        <ul className="capabilities" aria-label="Areas of focus">
+          <li>Entrepreneurship</li>
+          <li>Listening first</li>
+          <li>AI &amp; automation</li>
+          <li>Positive impact</li>
+        </ul>
 
         <section className="work-section" id="work">
           <div className="section-heading">
@@ -323,6 +434,10 @@ export default function Home() {
                 and efficient, while giving recruiters more time for candidates and
                 clients.
               </p>
+              <p className="project-proof">
+                <span>Current reach</span>
+                <strong>5,000+ recruiters · 10M+ tasks automated each year</strong>
+              </p>
               <ul className="project-points">
                 <li>AI agents inside existing ATS workflows</li>
                 <li>Email, WhatsApp, reminders and updates</li>
@@ -331,8 +446,6 @@ export default function Home() {
               <a
                 className="project-link"
                 href="https://www.hiredata.com/"
-                target="_blank"
-                rel="noreferrer"
               >
                 Visit HireData <Arrow />
               </a>
@@ -386,8 +499,6 @@ export default function Home() {
               <a
                 className="project-link"
                 href="https://firstnames.victormundi.com/"
-                target="_blank"
-                rel="noreferrer"
               >
                 Try First Names <Arrow />
               </a>
@@ -444,8 +555,8 @@ export default function Home() {
           </article>
         </section>
 
-        <section className="about-section" id="about">
-          <div className="about-lead">
+        <section className="about-section">
+          <div className="about-lead" id="about">
             <p className="eyebrow">
               <span /> About
             </p>
@@ -512,19 +623,14 @@ export default function Home() {
             >
               Twitter / @victormundi <Arrow />
             </a>
-            <a
-              className="contact-text-link"
-              href="https://github.com/victormundi"
-              target="_blank"
-              rel="noreferrer"
-            >
+            <a className="contact-text-link" href="https://github.com/victormundi">
               GitHub <Arrow />
             </a>
           </div>
-          <div className="contact-footer">
+          <footer className="contact-footer">
             <span>Jeroen Sakkers · Amsterdam</span>
             <span>Improve Every Day.</span>
-          </div>
+          </footer>
         </section>
       </main>
     </>
