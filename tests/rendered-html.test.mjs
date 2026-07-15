@@ -52,6 +52,14 @@ test("server-renders the finished portfolio", async () => {
   assert.match(html, /\/work\/yet-add\.jpg/);
   assert.match(html, /\/work\/yet-gratitude\.jpg/);
   assert.match(html, /5,000\+ recruiters/);
+  assert.match(html, /Career highlight · So far/);
+  assert.match(html, /then–Prime Minister Mark Rutte/);
+  assert.match(html, /≈2,000/);
+  assert.match(html, /Event portfolio sold/);
+  assert.match(html, /youtube-nocookie\.com\/embed\/mynvKKeugcs/);
+  assert.match(html, /youtube\.com\/watch\?v=mynvKKeugcs/);
+  assert.match(html, /<iframe[^>]*title="Jeroen Sakkers interviews/i);
+  assert.doesNotMatch(html, /youtube-nocookie[^"']*autoplay=1/i);
   assert.match(html, /Improve Every Day,/);
   assert.match(html, /in practice\./);
   assert.match(html, /\/story\/body-transformation\.mp4/);

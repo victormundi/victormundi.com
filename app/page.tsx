@@ -293,6 +293,79 @@ function EvaVisual() {
   );
 }
 
+function CareerHighlight() {
+  return (
+    <section className="career-section" aria-labelledby="career-title">
+      <div className="career-heading">
+        <p className="eyebrow">
+          <span /> Career highlight · So far
+        </p>
+        <h2 id="career-title">
+          A conversation on stage with
+          <em>then–Prime Minister Mark Rutte.</em>
+        </h2>
+      </div>
+
+      <div className="career-stage">
+        <div className="career-video">
+          <iframe
+            src="https://www.youtube-nocookie.com/embed/mynvKKeugcs?start=49&amp;rel=0"
+            title="Jeroen Sakkers interviews then–Prime Minister Mark Rutte at Dag van de ZZP'er"
+            loading="lazy"
+            referrerPolicy="strict-origin-when-cross-origin"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+          />
+          <div className="career-video-meta" aria-hidden="true">
+            <span>04 April 2015 · The Netherlands</span>
+            <span>Interview starts at 00:49</span>
+          </div>
+        </div>
+
+        <div className="career-story">
+          <p>
+            At the 2015 Dag van de ZZP&apos;er, a national event for independent
+            professionals, I interviewed then–Dutch Prime Minister Mark Rutte about
+            entrepreneurship and the role of self-employed people in the Dutch
+            economy. The live conversation ran for around half an hour; the public
+            recording is an edited excerpt.
+          </p>
+          <p>
+            We built the event into a national meeting place for freelancers and
+            independent contractors. In later years, it grew to around 2,000
+            attendees who came to learn, connect and celebrate entrepreneurship.
+          </p>
+          <dl className="career-facts">
+            <div>
+              <dt>≈30 min</dt>
+              <dd>Live conversation on stage</dd>
+            </div>
+            <div>
+              <dt>≈2,000</dt>
+              <dd>Attendees as the event grew</dd>
+            </div>
+            <div>
+              <dt>2019</dt>
+              <dd>Event portfolio sold</dd>
+            </div>
+          </dl>
+          <p className="career-next-chapter">
+            In 2019, my co-founders and I sold Dag van de ZZP&apos;er, the FOTY
+            Awards and ZZP Barometer to ZZP Nederland, creating the focus to build
+            Ratecard—and, later, HireData.
+          </p>
+          <a
+            className="career-link"
+            href="https://www.youtube.com/watch?v=mynvKKeugcs&amp;t=49s"
+          >
+            Watch the interview on YouTube <Arrow />
+          </a>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function TransformationStory() {
   return (
     <section className="practice-section" aria-labelledby="practice-title">
@@ -630,6 +703,8 @@ export default function Home() {
             <EvaVisual />
           </article>
         </section>
+
+        <CareerHighlight />
 
         <TransformationStory />
 
