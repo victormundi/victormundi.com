@@ -220,8 +220,6 @@ export default function Home() {
           <a href="#about">About</a>
           <a
             href="https://www.linkedin.com/in/victormundi/"
-            target="_blank"
-            rel="noreferrer"
           >
             LinkedIn <Arrow />
           </a>
@@ -233,6 +231,10 @@ export default function Home() {
           <div className="hero-copy">
             <p className="eyebrow">
               <span /> Founder &amp; product builder · Amsterdam
+            </p>
+            <p className="hero-motto">
+              <span>Motto / 01</span>
+              <strong>Improve Every Day</strong>
             </p>
             <h1>
               Better systems.
@@ -250,8 +252,6 @@ export default function Home() {
               <a
                 className="text-link"
                 href="https://www.linkedin.com/in/victormundi/"
-                target="_blank"
-                rel="noreferrer"
               >
                 Connect on LinkedIn <Arrow />
               </a>
@@ -459,7 +459,7 @@ export default function Home() {
               and recruitment technology—including Ratecard and, today, HireData.
             </p>
             <p>
-              The common denominator is simple: improve every day, and build
+              The common denominator is simple: Improve Every Day, and build
               technology that creates more room for meaningful human work.
             </p>
             <dl className="about-facts">
@@ -492,8 +492,6 @@ export default function Home() {
             <a
               className="button button-light"
               href="https://www.linkedin.com/in/victormundi/"
-              target="_blank"
-              rel="noreferrer"
             >
               Connect on LinkedIn <Arrow />
             </a>
@@ -508,7 +506,7 @@ export default function Home() {
           </div>
           <div className="contact-footer">
             <span>Jeroen Sakkers · Amsterdam</span>
-            <span>Improve every day.</span>
+            <span>Improve Every Day.</span>
           </div>
         </section>
       </main>

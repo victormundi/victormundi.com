@@ -32,7 +32,8 @@ test("server-renders the finished portfolio", async () => {
   assert.match(response.headers.get("content-type") ?? "", /^text\/html\b/i);
 
   const html = await response.text();
-  assert.match(html, /<title>Jeroen Sakkers — Founder &amp; Product Builder<\/title>/i);
+  assert.match(html, /<title>Jeroen Sakkers — Improve Every Day<\/title>/i);
+  assert.match(html, /Improve Every Day/);
   assert.match(html, /Better systems\./);
   assert.match(html, /More human work\./);
   assert.match(html, /HireData/);
@@ -48,6 +49,10 @@ test("includes the public contact and product destinations", async () => {
   const html = await (await render()).text();
 
   assert.match(html, /https:\/\/www\.linkedin\.com\/in\/victormundi\//);
+  assert.doesNotMatch(
+    html,
+    /href="https:\/\/www\.linkedin\.com\/in\/victormundi\/"[^>]*target="_blank"/,
+  );
   assert.match(html, /https:\/\/github\.com\/victormundi/);
   assert.match(html, /https:\/\/www\.hiredata\.com\//);
   assert.match(html, /https:\/\/firstnames\.victormundi\.com\//);

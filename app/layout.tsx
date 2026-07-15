@@ -27,9 +27,9 @@ export async function generateMetadata(): Promise<Metadata> {
 
   return {
     metadataBase: baseUrl,
-    title: "Jeroen Sakkers — Founder & Product Builder",
+    title: "Jeroen Sakkers — Improve Every Day",
     description:
-      "Selected work by Jeroen Sakkers: HireData, Sol with Rafa and Hans, First Names, yet., and Eva Keller.",
+      "Improve Every Day. Selected work by Jeroen Sakkers: HireData, Sol with Rafa and Hans, First Names, yet., and Eva Keller.",
     applicationName: "Jeroen Sakkers",
     authors: [{ name: "Jeroen Sakkers", url: "https://victormundi.com" }],
     creator: "Jeroen Sakkers",
@@ -42,9 +42,9 @@ export async function generateMetadata(): Promise<Metadata> {
     openGraph: {
       type: "website",
       url: "/",
-      title: "Jeroen Sakkers — Better systems. More human work.",
+      title: "Jeroen Sakkers — Improve Every Day",
       description:
-        "Five selected products across AI, automation, learning, memory and personal wellbeing.",
+        "Better systems. More human work. Five selected products across AI, automation, learning, memory and personal wellbeing.",
       siteName: "Jeroen Sakkers",
       images: [
         {
@@ -57,9 +57,9 @@ export async function generateMetadata(): Promise<Metadata> {
     },
     twitter: {
       card: "summary_large_image",
-      title: "Jeroen Sakkers — Better systems. More human work.",
+      title: "Jeroen Sakkers — Improve Every Day",
       description:
-        "Five selected products across AI, automation, learning, memory and personal wellbeing.",
+        "Better systems. More human work. Five selected products across AI, automation, learning, memory and personal wellbeing.",
       images: [socialImage],
     },
   };

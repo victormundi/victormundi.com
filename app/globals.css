@@ -186,6 +186,40 @@ img {
   box-shadow: 0 0 0 4px rgba(111, 131, 45, 0.13);
 }
 
+.hero-motto {
+  width: fit-content;
+  margin: 0 0 clamp(34px, 4vw, 54px);
+  display: inline-flex;
+  align-items: stretch;
+  border: 1px solid var(--ink);
+  background: var(--paper);
+  box-shadow: 7px 7px 0 var(--lime);
+  transform: rotate(-0.8deg);
+}
+
+.hero-motto > span {
+  padding: 0 12px;
+  display: flex;
+  align-items: center;
+  color: var(--lime);
+  background: var(--ink);
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.hero-motto > strong {
+  padding: 10px 18px 12px;
+  font-family: var(--serif);
+  font-size: clamp(24px, 2.4vw, 38px);
+  font-style: italic;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.045em;
+}
+
 .hero h1 {
   margin: 0;
   max-width: 900px;
@@ -1517,6 +1551,10 @@ img {
     font-size: clamp(60px, 8.5vw, 96px);
   }
 
+  .hero-motto {
+    margin-bottom: 34px;
+  }
+
   .project-card {
     grid-template-columns: minmax(310px, 0.75fr) minmax(0, 1.25fr);
   }
@@ -1864,6 +1902,20 @@ img {
 
   .about-facts > div {
     grid-template-columns: 70px 1fr;
+  }
+
+  .hero-motto {
+    max-width: 100%;
+  }
+
+  .hero-motto > span {
+    padding: 0 9px;
+    font-size: 7px;
+  }
+
+  .hero-motto > strong {
+    padding: 9px 13px 10px;
+    font-size: clamp(22px, 7.5vw, 30px);
   }
 
   .contact-section {
