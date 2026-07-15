@@ -29,7 +29,7 @@ export async function generateMetadata(): Promise<Metadata> {
     metadataBase: baseUrl,
     title: "Jeroen Sakkers — Improve Every Day",
     description:
-      "Improve Every Day. Selected work by Jeroen Sakkers: HireData, Sol with Rafa and Hans, First Names, yet., and Eva Keller.",
+      "Jeroen Sakkers is an Amsterdam entrepreneur and founder of HireData, building practical AI and thoughtful products with a mission to Improve Every Day.",
     applicationName: "Jeroen Sakkers",
     authors: [{ name: "Jeroen Sakkers", url: "https://victormundi.com" }],
     creator: "Jeroen Sakkers",
@@ -44,7 +44,7 @@ export async function generateMetadata(): Promise<Metadata> {
       url: "/",
       title: "Jeroen Sakkers — Improve Every Day",
       description:
-        "Better systems. More human work. Five selected products across AI, automation, learning, memory and personal wellbeing.",
+        "Entrepreneurship, listening and practical AI in service of more human work. Explore five selected products by Jeroen Sakkers.",
       siteName: "Jeroen Sakkers",
       images: [
         {
@@ -57,9 +57,11 @@ export async function generateMetadata(): Promise<Metadata> {
     },
     twitter: {
       card: "summary_large_image",
+      creator: "@victormundi",
+      site: "@victormundi",
       title: "Jeroen Sakkers — Improve Every Day",
       description:
-        "Better systems. More human work. Five selected products across AI, automation, learning, memory and personal wellbeing.",
+        "Entrepreneurship, listening and practical AI in service of more human work. Explore five selected products by Jeroen Sakkers.",
       images: [socialImage],
     },
   };

@@ -241,9 +241,9 @@ export default function Home() {
               <em>More human work.</em>
             </h1>
             <p className="hero-intro">
-              I&apos;m Jeroen Sakkers. I turn complicated workflows and personal
-              rituals into clear, useful products—currently as founder &amp; CEO of
-              HireData.
+              I&apos;m Jeroen Sakkers, an Amsterdam entrepreneur and founder of
+              HireData. I build companies and products around a simple personal
+              mission: Improve Every Day and have a positive impact.
             </p>
             <div className="hero-actions">
               <a className="button button-dark" href="#work">
@@ -276,19 +276,22 @@ export default function Home() {
             </div>
             <div className="hero-card-current">
               <span>NOW BUILDING</span>
-              <p>AI products that give recruitment teams more time for people.</p>
+              <p>
+                Practical AI that helps recruitment teams communicate personally
+                and spend more time with people.
+              </p>
             </div>
           </aside>
         </section>
 
         <div className="capabilities" aria-label="Areas of focus">
-          <span>Product strategy</span>
+          <span>Entrepreneurship</span>
+          <i>•</i>
+          <span>Listening first</span>
           <i>•</i>
           <span>AI &amp; automation</span>
           <i>•</i>
-          <span>Customer experience</span>
-          <i>•</i>
-          <span>Founder-led building</span>
+          <span>Positive impact</span>
         </div>
 
         <section className="work-section" id="work">
@@ -315,15 +318,15 @@ export default function Home() {
               <h3>HireData</h3>
               <p className="project-role">Founder &amp; CEO · Product direction</p>
               <p className="project-description">
-                AI operations for recruiting teams. HireData brings automations,
-                follow-ups and multichannel communication into the ATS—so people
-                can spend less time on admin and more time with candidates and
+                HireData helps staffing and recruiting companies upgrade their ATS
+                with AI agents and automations—making communication more personal
+                and efficient, while giving recruiters more time for candidates and
                 clients.
               </p>
               <ul className="project-points">
                 <li>AI agents inside existing ATS workflows</li>
                 <li>Email, WhatsApp, reminders and updates</li>
-                <li>Designed around the work recruiters already do</li>
+                <li>AI resourcefulness balanced with clear business logic</li>
               </ul>
               <a
                 className="project-link"
@@ -447,20 +450,24 @@ export default function Home() {
               <span /> About
             </p>
             <h2>
-              I like products that leave people with more time, more clarity, or a
-              better story to tell.
+              Entrepreneurship is how I improve things. Listening is where it
+              starts.
             </h2>
           </div>
           <div className="about-body">
             <p>
-              I&apos;m an Amsterdam-based entrepreneur working across product,
-              automation, partnerships and customer experience. Since co-founding
-              Victor Mundi in 2009, I&apos;ve built B2B products in entrepreneurship
-              and recruitment technology—including Ratecard and, today, HireData.
+              My personal mission is to improve and have a positive impact on the
+              world. I believe the way to do that is through entrepreneurship and
+              listening: understanding what people need, then building products
+              that leave them with more time, clarity or opportunity.
             </p>
             <p>
-              The common denominator is simple: Improve Every Day, and build
-              technology that creates more room for meaningful human work.
+              I&apos;m an Amsterdam-based entrepreneur working across product,
+              automation, partnerships and customer experience. Since co-founding
+              Victor Mundi in 2009, I&apos;ve built B2B products in recruitment
+              technology—including Ratecard and, today, HireData. My work pairs
+              practical AI with clear logic so technology strengthens, rather than
+              replaces, personal connection.
             </p>
             <dl className="about-facts">
               <div>
@@ -485,15 +492,25 @@ export default function Home() {
 
         <section className="contact-section">
           <p className="eyebrow light-eyebrow">
-            <span /> Let&apos;s stay in touch
+            <span /> Open invitation
           </p>
-          <h2>Always curious about what thoughtful people are building.</h2>
+          <h2>Could we add value by working together?</h2>
+          <p className="contact-copy">
+            Think you can add value by working with or for us? Send me a message.
+            I&apos;ll get back to you as soon as I can.
+          </p>
           <div className="contact-links">
             <a
               className="button button-light"
               href="https://www.linkedin.com/in/victormundi/"
             >
-              Connect on LinkedIn <Arrow />
+              Message me on LinkedIn <Arrow />
+            </a>
+            <a
+              className="contact-text-link"
+              href="https://twitter.com/victormundi"
+            >
+              Twitter / @victormundi <Arrow />
             </a>
             <a
               className="contact-text-link"

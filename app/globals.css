@@ -1501,8 +1501,16 @@ img {
   letter-spacing: -0.065em;
 }
 
+.contact-copy {
+  max-width: 660px;
+  margin: 32px 0 0;
+  color: rgba(255, 255, 255, 0.68);
+  font-size: clamp(17px, 1.6vw, 22px);
+  line-height: 1.55;
+}
+
 .contact-links {
-  margin-top: 48px;
+  margin-top: 42px;
   display: flex;
   align-items: center;
   gap: 28px;

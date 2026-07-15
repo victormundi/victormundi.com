@@ -53,6 +53,11 @@ test("includes the public contact and product destinations", async () => {
     html,
     /href="https:\/\/www\.linkedin\.com\/in\/victormundi\/"[^>]*target="_blank"/,
   );
+  assert.match(html, /https:\/\/twitter\.com\/victormundi/);
+  assert.match(html, /@victormundi/);
+  assert.match(html, /personal mission/i);
+  assert.match(html, /staffing and recruiting companies/i);
+  assert.match(html, /Message me on LinkedIn/);
   assert.match(html, /https:\/\/github\.com\/victormundi/);
   assert.match(html, /https:\/\/www\.hiredata\.com\//);
   assert.match(html, /https:\/\/firstnames\.victormundi\.com\//);
