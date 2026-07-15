@@ -21,6 +21,7 @@ const personJsonLd = {
   sameAs: [
     "https://www.linkedin.com/in/victormundi/",
     "https://twitter.com/victormundi",
+    "https://www.instagram.com/jeroen_sakkers/",
     "https://github.com/victormundi",
   ],
 };
@@ -300,6 +301,56 @@ function EvaVisual() {
   );
 }
 
+function TransformationStory() {
+  return (
+    <section className="practice-section" aria-labelledby="practice-title">
+      <div className="practice-media">
+        <video
+          controls
+          playsInline
+          preload="metadata"
+          poster="/story/body-transformation-poster.jpg"
+          aria-label="Jeroen Sakkers reflecting on his body transformation and the Improve Every Day mindset"
+          aria-describedby="practice-description"
+        >
+          <source src="/story/body-transformation.mp4" type="video/mp4" />
+          Your browser does not support embedded video. You can watch the original
+          reel on Instagram instead.
+        </video>
+        <div className="practice-media-meta" aria-hidden="true">
+          <span>01:30</span>
+          <span>Original story · November 2025</span>
+        </div>
+      </div>
+
+      <div className="practice-copy">
+        <p className="eyebrow light-eyebrow">
+          <span /> Personal practice · Body transformation
+        </p>
+        <h2 id="practice-title">
+          Improve Every Day, <em>in practice.</em>
+        </h2>
+        <p id="practice-description">
+          Before leaving on my world trip as a digital nomad, I documented a year
+          of physical change. It became personal proof of the idea I try to live
+          by: meaningful transformation comes from small choices, repeated with
+          consistency.
+        </p>
+        <p className="practice-note">
+          The same principle shapes how I build companies and products: listen,
+          learn, make the next improvement—and keep going.
+        </p>
+        <a
+          className="practice-link"
+          href="https://www.instagram.com/reel/DRr097ak3ah/"
+        >
+          Watch the original reel on Instagram <Arrow />
+        </a>
+      </div>
+    </section>
+  );
+}
+
 export default function Home() {
   return (
     <>
@@ -555,6 +606,8 @@ export default function Home() {
           </article>
         </section>
 
+        <TransformationStory />
+
         <section className="about-section">
           <div className="about-lead" id="about">
             <p className="eyebrow">
@@ -622,6 +675,12 @@ export default function Home() {
               href="https://twitter.com/victormundi"
             >
               Twitter / @victormundi <Arrow />
+            </a>
+            <a
+              className="contact-text-link"
+              href="https://www.instagram.com/jeroen_sakkers/"
+            >
+              Instagram / @jeroen_sakkers <Arrow />
             </a>
             <a className="contact-text-link" href="https://github.com/victormundi">
               GitHub <Arrow />

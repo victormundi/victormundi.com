@@ -44,6 +44,12 @@ test("server-renders the finished portfolio", async () => {
   assert.match(html, /https:\/\/victormundi\.com\/og\.jpg/);
   assert.match(html, /\/work\/hiredata-current\.jpg/);
   assert.match(html, /5,000\+ recruiters/);
+  assert.match(html, /Improve Every Day,/);
+  assert.match(html, /in practice\./);
+  assert.match(html, /\/story\/body-transformation\.mp4/);
+  assert.match(html, /\/story\/body-transformation-poster\.jpg/);
+  assert.match(html, /<video[^>]*controls=""[^>]*playsinline=""/i);
+  assert.doesNotMatch(html, /<video[^>]*autoplay/);
   assert.match(html, /application\/ld\+json/);
   assert.match(html, /class="hero-card" href="#about"/);
   assert.doesNotMatch(html, /target="_blank"/);
@@ -60,6 +66,9 @@ test("includes the public contact and product destinations", async () => {
   );
   assert.match(html, /https:\/\/twitter\.com\/victormundi/);
   assert.match(html, /@victormundi/);
+  assert.match(html, /https:\/\/www\.instagram\.com\/jeroen_sakkers\//);
+  assert.match(html, /https:\/\/www\.instagram\.com\/reel\/DRr097ak3ah\//);
+  assert.match(html, /@jeroen_sakkers/);
   assert.match(html, /personal mission/i);
   assert.match(html, /staffing and recruiting companies/i);
   assert.match(html, /Message me on LinkedIn/);
