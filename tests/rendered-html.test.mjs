@@ -43,6 +43,14 @@ test("server-renders the finished portfolio", async () => {
   assert.match(html, /Eva Keller/);
   assert.match(html, /https:\/\/victormundi\.com\/og\.jpg/);
   assert.match(html, /\/work\/hiredata-current\.jpg/);
+  assert.match(html, /\/work\/rafa-mark\.png/);
+  assert.match(html, /\/work\/hans-mark\.png/);
+  assert.match(html, /\/work\/rafa-current\.jpg/);
+  assert.match(html, /\/work\/hans-current\.jpg/);
+  assert.match(html, /\/work\/yet-mark\.png/);
+  assert.match(html, /\/work\/yet-today\.jpg/);
+  assert.match(html, /\/work\/yet-add\.jpg/);
+  assert.match(html, /\/work\/yet-gratitude\.jpg/);
   assert.match(html, /5,000\+ recruiters/);
   assert.match(html, /Improve Every Day,/);
   assert.match(html, /in practice\./);
@@ -69,12 +77,15 @@ test("includes the public contact and product destinations", async () => {
   assert.match(html, /https:\/\/www\.instagram\.com\/jeroen_sakkers\//);
   assert.match(html, /https:\/\/www\.instagram\.com\/reel\/DRr097ak3ah\//);
   assert.match(html, /@jeroen_sakkers/);
-  assert.match(html, /personal mission/i);
-  assert.match(html, /staffing and recruiting companies/i);
+  assert.match(html, /Helping people discover/i);
+  assert.match(html, /their superpower/i);
+  assert.match(html, /Products that create more room for people/i);
   assert.match(html, /Message me on LinkedIn/);
   assert.match(html, /https:\/\/github\.com\/victormundi/);
   assert.match(html, /https:\/\/www\.hiredata\.com\//);
   assert.match(html, /https:\/\/firstnames\.victormundi\.com\//);
+  assert.doesNotMatch(html, /€10M|10M in assets|life partner|granddad/i);
+  assert.doesNotMatch(html, /run my business from my phone|digital nomad|Charles Bukowski/i);
 });
 
 test("publishes robots and sitemap discovery files", async () => {

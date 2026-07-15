@@ -9,6 +9,8 @@ const personJsonLd = {
   url: "https://victormundi.com",
   image: "https://victormundi.com/jeroen.png",
   jobTitle: "Founder & CEO of HireData",
+  description:
+    "Amsterdam entrepreneur building practical AI and thoughtful products to help people discover and use their superpower.",
   homeLocation: {
     "@type": "Place",
     name: "Amsterdam, The Netherlands",
@@ -64,7 +66,7 @@ function SolVisual() {
     <div className="project-visual sol-visual" aria-hidden="true">
       <div className="coach-label rafa-label">
         <img
-          src="/work/rafa-icon.png"
+          src="/work/rafa-mark.png"
           alt=""
           width="160"
           height="160"
@@ -78,7 +80,7 @@ function SolVisual() {
       </div>
       <div className="coach-label hans-label">
         <img
-          src="/work/hans-icon.png"
+          src="/work/hans-mark.png"
           alt=""
           width="160"
           height="160"
@@ -93,7 +95,7 @@ function SolVisual() {
       <div className="phone phone-rafa">
         <div className="phone-speaker" />
         <img
-          src="/work/rafa-onboarding.jpg"
+          src="/work/rafa-current.jpg"
           alt=""
           width="644"
           height="1400"
@@ -104,7 +106,7 @@ function SolVisual() {
       <div className="phone phone-hans">
         <div className="phone-speaker" />
         <img
-          src="/work/hans-home.jpg"
+          src="/work/hans-current.jpg"
           alt=""
           width="644"
           height="1400"
@@ -170,52 +172,42 @@ function YetVisual() {
     <div className="project-visual yet-visual" aria-hidden="true">
       <img
         className="yet-app-icon"
-        src="/work/yet-icon.png"
+        src="/work/yet-mark.png"
         alt=""
         width="160"
         height="160"
         loading="lazy"
         decoding="async"
       />
-      <div className="yet-phone">
-        <div className="yet-topline">
-          <strong>yet.</strong>
-          <span>Today</span>
-        </div>
-        <div className="yet-dots">
-          <i />
-          <i />
-          <i />
-          <i />
-          <i />
-          <i />
-          <i />
-        </div>
-        <div className="yet-evidence">
-          <span>LIVE EVIDENCE</span>
-          <strong>Your day, as it is.</strong>
-          <p>No invented streaks. No noisy dashboard.</p>
-        </div>
-        <div className="yet-signals">
-          <div>
-            <span>Nutrition</span>
-            <strong>Ready to log</strong>
-          </div>
-          <div>
-            <span>Training</span>
-            <strong>Your record</strong>
-          </div>
-        </div>
-        <div className="yet-next">
-          <span>ONE NEXT ACTION</span>
-          <p>Record what matters in seconds.</p>
-          <b>＋</b>
-        </div>
-        <div className="yet-nav">
-          <strong>Today</strong>
-          <span>Add</span>
-          <span>Progress</span>
-        </div>
+      <div className="yet-screen yet-screen-add">
+        <img
+          src="/work/yet-add.jpg"
+          alt=""
+          width="644"
+          height="1393"
+          loading="lazy"
+          decoding="async"
+        />
+      </div>
+      <div className="yet-screen yet-screen-today">
+        <img
+          src="/work/yet-today.jpg"
+          alt=""
+          width="644"
+          height="1393"
+          loading="lazy"
+          decoding="async"
+        />
+      </div>
+      <div className="yet-screen yet-screen-gratitude">
+        <img
+          src="/work/yet-gratitude.jpg"
+          alt=""
+          width="644"
+          height="1393"
+          loading="lazy"
+          decoding="async"
+        />
       </div>
       <div className="yet-caption">
         <span>Local-first</span>
@@ -331,14 +323,15 @@ function TransformationStory() {
           Improve Every Day, <em>in practice.</em>
         </h2>
         <p id="practice-description">
-          Before leaving on my world trip as a digital nomad, I documented a year
-          of physical change. It became personal proof of the idea I try to live
-          by: meaningful transformation comes from small choices, repeated with
-          consistency.
+          I documented a year of physical change to understand what consistent
+          effort really looks like. It became personal proof that meaningful
+          transformation is rarely one dramatic decision; it is small choices,
+          repeated long enough to compound.
         </p>
         <p className="practice-note">
-          The same principle shapes how I build companies and products: listen,
-          learn, make the next improvement—and keep going.
+          The same principle shapes how I lead and build: stay curious, make
+          progress visible, and create the conditions for people to surprise
+          themselves.
         </p>
         <a
           className="practice-link"
@@ -423,17 +416,17 @@ export default function Home() {
             <div className="hero-card-current">
               <span>NOW BUILDING</span>
               <p>
-                Practical AI that helps recruitment teams communicate personally
-                and spend more time with people.
+                Practical AI that removes repetitive work so recruitment teams can
+                focus on candidates, clients and better decisions.
               </p>
             </div>
           </a>
 
           <div className="hero-support">
             <p className="hero-intro">
-              I&apos;m an Amsterdam entrepreneur and founder of HireData. I build
-              practical AI and thoughtful products that help people do better
-              work—and I try to improve every day.
+              I&apos;m an Amsterdam entrepreneur and founder of HireData. My mission
+              is to help people discover their superpower—the work they do best—and
+              build systems that give them more room to use it.
             </p>
             <div className="hero-actions">
               <a className="button button-dark" href="#work">
@@ -450,23 +443,52 @@ export default function Home() {
         </section>
 
         <ul className="capabilities" aria-label="Areas of focus">
+          <li>People &amp; psychology</li>
           <li>Entrepreneurship</li>
-          <li>Listening first</li>
           <li>AI &amp; automation</li>
-          <li>Positive impact</li>
+          <li>Reliable systems</li>
         </ul>
+
+        <section className="mission-section" aria-labelledby="mission-title">
+          <div className="mission-lead">
+            <p className="eyebrow">
+              <span /> Mission
+            </p>
+            <h2 id="mission-title">
+              Helping people discover <em>their superpower.</em>
+            </h2>
+          </div>
+          <div className="mission-body">
+            <p>
+              A superpower is not a slogan. It is the combination of strengths,
+              instincts and energy that appears when someone is doing their best
+              work.
+            </p>
+            <p>
+              I start by asking questions and listening closely. Then I build away
+              the friction—using thoughtful products, practical AI and reliable
+              systems to create more room for people to contribute what is uniquely
+              theirs.
+            </p>
+            <ul className="mission-signals" aria-label="How the mission becomes work">
+              <li>Listen closely</li>
+              <li>Remove friction</li>
+              <li>Build to endure</li>
+              <li>Grow together</li>
+            </ul>
+          </div>
+        </section>
 
         <section className="work-section" id="work">
           <div className="section-heading">
             <p className="eyebrow">
               <span /> Selected work · Five products
             </p>
-            <h2>
-              From recruiting workflows to remembering someone&apos;s name.
-            </h2>
+            <h2>Products that create more room for people.</h2>
             <p>
-              Different categories, one thread: make the complicated feel calm,
-              useful and distinctly human.
+              Across recruiting, language, relationships, wellbeing and AI
+              operations, I look for the friction that holds people back—and build
+              it away.
             </p>
           </div>
 
@@ -480,10 +502,10 @@ export default function Home() {
               <h3>HireData</h3>
               <p className="project-role">Founder &amp; CEO · Product direction</p>
               <p className="project-description">
-                HireData helps staffing and recruiting companies upgrade their ATS
-                with AI agents and automations—making communication more personal
-                and efficient, while giving recruiters more time for candidates and
-                clients.
+                Recruiters do their best work when they can focus on candidates and
+                clients—not repetitive administration. HireData upgrades the ATS
+                with AI agents and automations, making communication more personal
+                and consistent while returning time to people.
               </p>
               <p className="project-proof">
                 <span>Current reach</span>
@@ -514,9 +536,10 @@ export default function Home() {
               <h3>Sol — Rafa &amp; Hans</h3>
               <p className="project-role">Product concept · UX · Native iOS</p>
               <p className="project-description">
-                Voice-first language coaching with a personality. Rafa makes
-                European Spanish warm and precise; Hans makes everyday Dutch calm,
-                direct and useful.
+                A new language matters when it unlocks a real conversation. Rafa and
+                Hans are voice-first coaches designed around speaking from the
+                start: Rafa brings warmth and precision to European Spanish; Hans
+                makes everyday Dutch calm, direct and useful.
               </p>
               <ul className="project-points">
                 <li>Speaking before tapping through exercises</li>
@@ -538,9 +561,9 @@ export default function Home() {
               <h3>First Names</h3>
               <p className="project-role">Product · UX · Web &amp; Chrome</p>
               <p className="project-description">
-                Remember the people behind your network. First Names turns your own
-                connection lists into a private weekly ritual: three names to
-                recall, and one warm reason to reconnect.
+                Relationships compound when people feel remembered. First Names
+                turns a connection list into a private weekly ritual: three names
+                to recall and one warm reason to reconnect.
               </p>
               <ul className="project-points">
                 <li>Active recall instead of passive browsing</li>
@@ -567,9 +590,10 @@ export default function Home() {
               <h3>yet.</h3>
               <p className="project-role">Product system · UX · Native iOS</p>
               <p className="project-description">
-                A private record for the whole person. yet. brings food, training,
-                body measurements and reflection into one calm iPhone experience,
-                with evidence first and one useful next action.
+                A private record for a life in progress. yet. brings health,
+                training and reflection into one calm iPhone experience, turning
+                honest evidence into one useful next action without making growth
+                feel judgmental.
               </p>
               <ul className="project-points">
                 <li>Today, Add and Progress—nothing more</li>
@@ -591,16 +615,17 @@ export default function Home() {
               <h3>Eva Keller</h3>
               <p className="project-role">AI system · Operations design</p>
               <p className="project-description">
-                An AI operations manager built to do, remember and report. Eva turns
-                ongoing work into a visible system of tasks, knowledge, status and
-                resource use—with explicit human approval boundaries.
+                Complex work moves faster when priorities, context and
+                accountability stay visible. Eva turns ongoing work into clear next
+                steps and progress updates, while keeping consequential decisions
+                with people.
               </p>
               <ul className="project-points">
-                <li>Persistent tasks and knowledge</li>
-                <li>Status, deployments and audit history</li>
-                <li>Proactive work with visible boundaries</li>
+                <li>Turns goals into traceable next steps</li>
+                <li>Keeps context and progress visible</li>
+                <li>Escalates decisions that need a person</li>
               </ul>
-              <span className="project-status">Private HireData system</span>
+              <span className="project-status">Private product system</span>
             </div>
             <EvaVisual />
           </article>
@@ -614,24 +639,23 @@ export default function Home() {
               <span /> About
             </p>
             <h2>
-              Entrepreneurship is how I improve things. Listening is where it
-              starts.
+              Help people find what they do best. Build around it.
             </h2>
           </div>
           <div className="about-body">
             <p>
-              My personal mission is to improve and have a positive impact on the
-              world. I believe the way to do that is through entrepreneurship and
-              listening: understanding what people need, then building products
-              that leave them with more time, clarity or opportunity.
+              My mission is helping people discover their superpower—the strengths,
+              instincts and energy that appear when they are at their best. I start
+              by asking questions and listening closely, then turn what I learn into
+              products and systems that give people more clarity, capability and
+              time.
             </p>
             <p>
-              I&apos;m an Amsterdam-based entrepreneur working across product,
-              automation, partnerships and customer experience. Since co-founding
-              Victor Mundi in 2009, I&apos;ve built B2B products in recruitment
-              technology—including Ratecard and, today, HireData. My work pairs
-              practical AI with clear logic so technology strengthens, rather than
-              replaces, personal connection.
+              Entrepreneurship is how I choose to create positive impact. Since
+              co-founding Victor Mundi in 2009, I have built B2B products in
+              recruitment technology, including Ratecard and HireData. I care about
+              practical AI, thoughtful user experience and dependable systems that
+              scale without losing the human connection that made them valuable.
             </p>
             <dl className="about-facts">
               <div>
@@ -651,6 +675,34 @@ export default function Home() {
                 <dd>Amsterdam, The Netherlands</dd>
               </div>
             </dl>
+            <div className="work-principles">
+              <h3>How I work</h3>
+              <ul>
+                <li>
+                  <strong>Listen first</strong>
+                  <span>Good questions reveal what people actually need.</span>
+                </li>
+                <li>
+                  <strong>Keep it simple</strong>
+                  <span>
+                    Automate repeatable work so attention stays on decisions and
+                    people.
+                  </span>
+                </li>
+                <li>
+                  <strong>Build to endure</strong>
+                  <span>
+                    Reliable systems should scale without depending on heroics.
+                  </span>
+                </li>
+                <li>
+                  <strong>Grow together</strong>
+                  <span>
+                    Trust, honesty and shared progress make strong partnerships.
+                  </span>
+                </li>
+              </ul>
+            </div>
           </div>
         </section>
 
@@ -658,10 +710,12 @@ export default function Home() {
           <p className="eyebrow light-eyebrow">
             <span /> Open invitation
           </p>
-          <h2>Could we add value by working together?</h2>
+          <h2>Could we build something better together?</h2>
           <p className="contact-copy">
-            Think you can add value by working with or for us? Send me a message.
-            I&apos;ll get back to you as soon as I can.
+            I enjoy working with thoughtful people who care about customers, craft
+            and measurable progress. If you see a way to collaborate—or want to
+            help build HireData—send me a message. I&apos;ll get back to you as soon
+            as I can.
           </p>
           <div className="contact-links">
             <a
