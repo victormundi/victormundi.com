@@ -119,21 +119,21 @@ const siteJsonLd = {
     {
       "@type": "CreativeWork",
       "@id": "https://victormundi.com/#portfolio-exit-2019",
-      name: "VictorMundi portfolio exit to ZZP Nederland",
+      name: "VictorMundi portfolio exit into a leading Dutch insurance group",
       url: "https://www.flexnieuws.nl/2019/08/zzp-nederland-neemt-zzp-initiatieven-victormundi-over/",
       datePublished: "2019-08-27",
       inLanguage: "nl-NL",
       description:
-        "The 2019 sale of Dag van de ZZP’er, the FOTY Awards and ZZP Barometer by VictorMundi to ZZP Nederland.",
+        "The 2019 sale of three national initiatives by VictorMundi to a company then within leading Dutch insurer a.s.r.’s Distribution & Services portfolio.",
       about: { "@id": "https://victormundi.com/#jeroen-sakkers" },
     },
     {
       "@type": "VideoObject",
       "@id": "https://victormundi.com/#mark-rutte-interview",
-      name: "Jeroen Sakkers interviews then–Prime Minister Mark Rutte",
+      name: "Jeroen Sakkers interviews the Prime Minister of the Netherlands",
       description:
-        "An edited public recording of Jeroen Sakkers interviewing then–Dutch Prime Minister Mark Rutte at Dag van de ZZP’er in 2015.",
-      thumbnailUrl: "https://i.ytimg.com/vi/mynvKKeugcs/hqdefault.jpg",
+        "An edited public recording of Jeroen Sakkers interviewing Mark Rutte, then Prime Minister of the Netherlands, at Dag van de ZZP’er in 2015.",
+      thumbnailUrl: "https://i.ytimg.com/vi/mynvKKeugcs/maxresdefault.jpg",
       uploadDate: "2015-10-13T05:57:02-07:00",
       duration: "PT18M51S",
       embedUrl: "https://www.youtube-nocookie.com/embed/mynvKKeugcs?start=49",
@@ -442,30 +442,30 @@ function Milestones() {
       <div className="milestones-heading">
         <div>
           <p className="eyebrow light-eyebrow">
-            <span /> Selected track record · 2014—2019
+            <span /> Selected track record · Before HireData
           </p>
           <h2 id="milestones-title">
-            Building a national platform
-            <em>around independent work.</em>
+            Built for a national audience.
+            <em>Then focused on software.</em>
           </h2>
         </div>
         <p>
-          Before focusing on Ratecard and HireData, VictorMundi built research,
-          media and live-event initiatives for independent professionals in the
-          Netherlands.
+          Before HireData, I co-built a portfolio across original research,
+          weekly national business radio and live events. The work culminated in
+          a sold-out 2,000-person event and a three-initiative portfolio exit.
         </p>
       </div>
 
       <article className="milestone milestone-exit" id="exit-zzp-nederland">
         <div className="milestone-copy">
-          <p className="milestone-label">2019 · Acquisition by ZZP Nederland</p>
-          <h3>Three VictorMundi initiatives acquired by ZZP Nederland.</h3>
+          <p className="milestone-label">2019 · Portfolio exit</p>
+          <h3>A three-initiative exit into a leading Dutch insurance group.</h3>
           <p>
             With my brother and co-founder Robbie, I built Dag van de ZZP&apos;er,
             the FOTY Awards and ZZP Barometer. After the 2018 event sold all 2,000
-            tickets, ZZP Nederland—then part of a.s.r.&apos;s Distribution &amp; Services
-            portfolio—acquired all three initiatives in August 2019. The transaction
-            allowed us to focus on Ratecard, and later HireData.
+            tickets, we sold all three initiatives to ZZP Nederland—then part of
+            leading Dutch insurer a.s.r.&apos;s Distribution &amp; Services portfolio. The
+            transaction allowed us to focus on Ratecard, and later HireData.
           </p>
           <dl className="milestone-facts" aria-label="Portfolio exit facts">
             <div>
@@ -492,24 +492,26 @@ function Milestones() {
         <figure className="milestone-figure milestone-exit-figure">
           <img
             src="/story/victormundi-zzp-nederland-exit-2019.jpg"
-            alt="Robbie Sakkers, Jeroen Sakkers and Frank Alfrink marking the 2019 sale of three VictorMundi initiatives to ZZP Nederland"
+            alt="VictorMundi founders marking the 2019 sale of three national initiatives"
             width="1646"
             height="1098"
             loading="lazy"
             decoding="async"
           />
           <figcaption>
-            <span>Robbie Sakkers · Jeroen Sakkers · Frank Alfrink</span>
-            <span>Acquisition announcement · 2019</span>
+            <span>VictorMundi portfolio · 2019</span>
+            <span>Three-initiative exit</span>
           </figcaption>
         </figure>
       </article>
 
+      <p className="milestone-pair-label">How we built national reach · 2014—2015</p>
+
       <div className="milestone-pair">
         <article className="milestone milestone-bnr" id="bnr-zzp-cafe">
           <div className="milestone-copy">
-            <p className="milestone-label">2014 · Co-host, BNR ZZP Café</p>
-            <h3>Weekly national radio with Diana Matroos.</h3>
+            <p className="milestone-label">2014 · Co-host, BNR Nieuwsradio</p>
+            <h3>Weekly co-host on Dutch national business radio.</h3>
             <p>
               I helped launch BNR ZZP Café and co-hosted the weekly programme with
               journalist Diana Matroos. Each Saturday, we discussed policy,
@@ -548,30 +550,30 @@ function Milestones() {
               decoding="async"
             />
             <figcaption>
-              <span>BNR ZZP Café · 2014</span>
-              <span>With Diana Matroos</span>
+              <span>BNR Nieuwsradio · 2014</span>
+              <span>Weekly co-host</span>
             </figcaption>
           </figure>
         </article>
 
         <article className="milestone milestone-rutte" id="mark-rutte-interview">
           <div className="milestone-copy">
-            <p className="milestone-label">2015 · Interview, Mark Rutte</p>
-            <h3>A 30-minute conversation on independent work.</h3>
+            <p className="milestone-label">2015 · Live interview</p>
+            <h3>Thirty minutes on stage with the Prime Minister of the Netherlands.</h3>
             <p>
-              At the 2015 Dag van de ZZP&apos;er, I interviewed then–Dutch Prime
-              Minister Mark Rutte about entrepreneurship and the role of
-              self-employed people in the Dutch economy. The public recording is an
-              edited excerpt of our half-hour conversation.
+              At Dag van de ZZP&apos;er, I interviewed Mark Rutte, then Prime Minister
+              of the Netherlands, about entrepreneurship and the role of independent
+              professionals in the Dutch economy. The public video is an edited
+              excerpt of our half-hour conversation.
             </p>
-            <dl className="milestone-facts" aria-label="Mark Rutte interview facts">
+            <dl className="milestone-facts" aria-label="Prime Minister interview facts">
               <div>
                 <dt>≈30 min</dt>
                 <dd>Live conversation</dd>
               </div>
               <div>
                 <dt>2015</dt>
-                <dd>Dag van de ZZP&apos;er</dd>
+                <dd>National event</dd>
               </div>
               <div>
                 <dt>00:49</dt>
@@ -586,12 +588,6 @@ function Milestones() {
               <span>04 April 2015 · The Netherlands</span>
               <span>Edited public recording</span>
             </div>
-            <a
-              className="milestone-link"
-              href="https://www.youtube.com/watch?v=mynvKKeugcs&amp;t=49s"
-            >
-              Watch the interview on YouTube <Arrow />
-            </a>
           </div>
         </article>
       </div>

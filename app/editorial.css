@@ -578,7 +578,7 @@
 .milestone-label {
   margin-bottom: 24px;
   color: #5c6057;
-  font-size: 11px;
+  font-size: 12px;
 }
 
 .milestone h3 {
@@ -604,7 +604,7 @@
 }
 
 .milestone-facts dd {
-  font-size: 10px;
+  font-size: 11px;
 }
 
 .milestone-figure {
@@ -621,11 +621,21 @@
   color: #666a61;
   border-bottom: 1px solid var(--line);
   background: transparent;
-  font-size: 9px;
+  font-size: 11px;
+}
+
+.milestone-pair-label {
+  margin: clamp(64px, 7vw, 92px) 0 22px;
+  color: #5c6057;
+  font-family: var(--font-geist-sans), sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
 }
 
 .milestone-pair {
-  margin-top: clamp(64px, 7vw, 92px);
+  margin-top: 0;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: clamp(42px, 6vw, 82px);
 }
@@ -1367,8 +1377,13 @@
   }
 
   .milestone-pair {
-    margin-top: 56px;
+    margin-top: 0;
     gap: 56px;
+  }
+
+  .milestone-pair-label {
+    margin-top: 56px;
+    margin-bottom: 18px;
   }
 
   .mission-section,
@@ -1405,8 +1420,11 @@
 }
 
 @media (max-width: 360px) {
-  .site-header nav a:nth-child(2),
-  .site-header nav a:nth-child(3) {
+  .site-header nav a:nth-child(5) {
     display: none;
+  }
+
+  .site-header nav a:nth-child(2) {
+    display: inline-flex;
   }
 }

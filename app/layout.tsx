@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   metadataBase: siteUrl,
   title: "Jeroen Sakkers — Founder of HireData | Improve Every Day",
   description:
-    "Jeroen Sakkers is the Amsterdam founder of HireData. Explore his AI products, BNR Nieuwsradio work, 2,000-person event and 2019 portfolio exit.",
+    "Jeroen Sakkers is the Amsterdam founder of HireData. Explore his AI products, national business radio work, 2,000-person event and portfolio exit into a leading Dutch insurance group.",
   applicationName: "Jeroen Sakkers",
   authors: [{ name: "Jeroen Sakkers", url: "https://victormundi.com" }],
   creator: "Jeroen Sakkers",
