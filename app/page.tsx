@@ -1,5 +1,7 @@
 /* eslint-disable @next/next/no-img-element -- Native assets keep the Sites build portable; every image is sized, compressed, and deferred where appropriate. */
 
+import LiteYouTube from "./LiteYouTube";
+
 const Arrow = () => <span aria-hidden="true">↗</span>;
 
 const siteJsonLd = {
@@ -150,7 +152,7 @@ const siteJsonLd = {
       "@id": "https://victormundi.com/#body-transformation-video",
       name: "Improve Every Day: Jeroen Sakkers’ body transformation",
       description:
-        "Jeroen Sakkers reflects on a year of consistent training and the small choices behind meaningful transformation.",
+        "Jeroen Sakkers reflects on six months of consistent training and the small choices behind meaningful transformation.",
       thumbnailUrl:
         "https://victormundi.com/story/body-transformation-poster.jpg",
       uploadDate: "2025-11-30",
@@ -579,14 +581,7 @@ function Milestones() {
           </div>
 
           <div className="milestone-video">
-            <iframe
-              src="https://www.youtube-nocookie.com/embed/mynvKKeugcs?start=49&amp;rel=0"
-              title="Jeroen Sakkers interviews then–Prime Minister Mark Rutte at Dag van de ZZP'er"
-              loading="lazy"
-              referrerPolicy="strict-origin-when-cross-origin"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            />
+            <LiteYouTube />
             <div className="milestone-video-meta" aria-hidden="true">
               <span>04 April 2015 · The Netherlands</span>
               <span>Edited public recording</span>
@@ -621,6 +616,12 @@ function TransformationStory() {
           aria-describedby="practice-description"
         >
           <source src="/story/body-transformation.mp4" type="video/mp4" />
+          <track
+            kind="captions"
+            src="/story/body-transformation.en.vtt"
+            srcLang="en"
+            label="English"
+          />
           Your browser does not support embedded video. You can watch the original
           reel on Instagram instead.
         </video>
@@ -638,13 +639,46 @@ function TransformationStory() {
           Improve Every Day, <em>beyond work.</em>
         </h2>
         <p id="practice-description">
-          In 2025, I documented a year of training to show what the principle looks
-          like outside work: small, sustained choices, measured over time.
+          In 2025, I documented six months of training to show what the principle
+          looks like outside work: small, sustained choices, measured over time.
         </p>
         <p className="practice-note">
           The same discipline shapes how I lead and build: define the next useful
           step, make progress visible and keep showing up.
         </p>
+        <details className="practice-transcript">
+          <summary>Read the 90-second transcript</summary>
+          <div>
+            <p>
+              <strong>Jeroen:</strong> I&apos;m Jeroen, I&apos;m 38 years old and I&apos;m a
+              remote entrepreneur. My first goal was to be below 100 kilos, and I
+              hadn&apos;t been below 100 kilos for a long time. One of the things I&apos;m
+              focusing on is eating healthier and also drinking less alcohol—or no
+              alcohol, actually.
+            </p>
+            <p>
+              <strong>Coach:</strong> We were tracking the calories. He really
+              enjoyed the process and also learning about what nutrition does for
+              him and why it is so hard to maintain a diet. To really maintain
+              contact with him, I texted him every Friday about how it went and
+              gave him more insight into balancing his weekends out. We trained for
+              six months in total.
+            </p>
+            <p>
+              <strong>Jeroen:</strong> I sometimes texted Luuk: “How the hell am I
+              going to do this?” He sent me tips. I started at 113 kilos. Right now
+              I&apos;m 92, so I lost 21 kilos. I have even more energy now. Just feeling
+              better is a gift—better than reaching the goal itself.
+            </p>
+            <p>
+              <strong>Coach:</strong> In the beginning, his mindset was all or
+              nothing: reach the goal and be hard on yourself. At the end of this
+              six-month journey, he is much kinder to himself. My tip is to zoom
+              out, because you will see that you are improving—not perhaps every
+              day, but every week and every month.
+            </p>
+          </div>
+        </details>
         <a
           className="practice-link"
           href="https://www.instagram.com/reel/DRr097ak3ah/"
@@ -696,6 +730,12 @@ export default function Home() {
               <span>Operating principle</span>
               <strong>Improve Every Day.</strong>
             </p>
+            <a
+              className="mobile-hiredata-cta"
+              href="https://www.hiredata.com/"
+            >
+              Visit HireData <Arrow />
+            </a>
           </div>
 
           <div className="hero-support">

@@ -661,6 +661,73 @@
   box-shadow: none;
 }
 
+.lite-youtube {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  padding: 0;
+  display: block;
+  overflow: hidden;
+  color: white;
+  border: 0;
+  background: #151713;
+  cursor: pointer;
+}
+
+.lite-youtube img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(0.72) contrast(1.08) brightness(0.78);
+  transition: filter 180ms ease, transform 360ms ease;
+}
+
+.lite-youtube::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 48%, rgba(12, 14, 11, 0.7));
+  pointer-events: none;
+}
+
+.lite-youtube-action {
+  position: absolute;
+  z-index: 1;
+  left: 20px;
+  bottom: 18px;
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+  font-family: var(--font-geist-sans), sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.lite-youtube-play {
+  width: 42px;
+  height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 2px;
+  color: #11130f;
+  border-radius: 50%;
+  background: var(--lime);
+  font-size: 12px;
+}
+
+.lite-youtube:hover img,
+.lite-youtube:focus-visible img {
+  filter: saturate(0.88) contrast(1.04) brightness(0.9);
+  transform: scale(1.015);
+}
+
+.lite-youtube:focus-visible {
+  outline: 3px solid #526123;
+  outline-offset: 4px;
+}
+
 .mission-section {
   padding: clamp(88px, 9vw, 132px) 0;
   border-top: 1px solid var(--line);
@@ -726,6 +793,79 @@
 .practice-media-meta {
   color: #666a61;
   font-size: 9px;
+}
+
+.practice-transcript {
+  margin-top: 24px;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.practice-transcript summary {
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  color: #34372f;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  list-style: none;
+}
+
+.practice-transcript summary::-webkit-details-marker {
+  display: none;
+}
+
+.practice-transcript summary::after {
+  content: "+";
+  color: #66743d;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.practice-transcript[open] summary::after {
+  content: "−";
+}
+
+.practice-transcript summary:focus-visible {
+  outline: 2px solid #526123;
+  outline-offset: 4px;
+}
+
+.practice-transcript > div {
+  padding: 2px 0 18px;
+}
+
+.practice-transcript p {
+  margin: 0 0 12px;
+  color: #565a51;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.practice-transcript p:last-child {
+  margin-bottom: 0;
+}
+
+.practice-transcript strong {
+  color: var(--ink);
+}
+
+.mobile-hiredata-cta {
+  display: none;
+}
+
+.site-header nav a[href^="http"]:visited,
+.milestone-link:visited,
+.project-link:visited,
+.practice-link:visited {
+  color: #53602f;
+}
+
+.contact-section .contact-text-link:visited {
+  color: #d8e6ad;
 }
 
 .practice-section .light-eyebrow {
@@ -959,12 +1099,44 @@
     font-size: 12px;
   }
 
+  .site-header nav a:nth-child(1) {
+    display: inline-flex;
+  }
+
+  .site-header nav a:nth-child(3),
+  .site-header nav a:nth-child(4) {
+    display: none;
+  }
+
   .hero {
     padding: 44px 20px 56px;
   }
 
   .hero-lead {
     order: 1;
+  }
+
+  .mobile-hiredata-cta {
+    min-height: 44px;
+    width: fit-content;
+    margin-top: 3px;
+    padding: 0 16px;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    color: white;
+    background: var(--ink);
+    font-size: 12px;
+    font-weight: 700;
+  }
+
+  .mobile-hiredata-cta:visited {
+    color: white;
+  }
+
+  .mobile-hiredata-cta:focus-visible {
+    outline: 3px solid #6d7c35;
+    outline-offset: 4px;
   }
 
   .hero-card {
@@ -1233,6 +1405,7 @@
 }
 
 @media (max-width: 360px) {
+  .site-header nav a:nth-child(2),
   .site-header nav a:nth-child(3) {
     display: none;
   }

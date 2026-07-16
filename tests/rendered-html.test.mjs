@@ -76,12 +76,17 @@ test("server-renders the finished portfolio", async () => {
   assert.match(html, /≈30 min/);
   assert.match(html, /youtube-nocookie\.com\/embed\/mynvKKeugcs/);
   assert.match(html, /youtube\.com\/watch\?v=mynvKKeugcs/);
-  assert.match(html, /<iframe[^>]*title="Jeroen Sakkers interviews/i);
+  assert.match(html, /class="lite-youtube"/i);
+  assert.match(html, /i\.ytimg\.com\/vi\/mynvKKeugcs\/hqdefault\.jpg/i);
+  assert.doesNotMatch(html, /<iframe/i);
   assert.doesNotMatch(html, /youtube-nocookie[^"']*autoplay=1/i);
   assert.match(html, /Improve Every Day,/);
   assert.match(html, /beyond work\./);
   assert.match(html, /\/story\/body-transformation\.mp4/);
   assert.match(html, /\/story\/body-transformation-poster\.jpg/);
+  assert.match(html, /\/story\/body-transformation\.en\.vtt/);
+  assert.match(html, /kind="captions"/i);
+  assert.match(html, /Read the 90-second transcript/);
   assert.match(html, /<video[^>]*controls=""[^>]*playsinline=""/i);
   assert.doesNotMatch(html, /<video[^>]*autoplay/);
   assert.match(html, /application\/ld\+json/);

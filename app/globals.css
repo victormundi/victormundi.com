@@ -7,7 +7,7 @@
   --muted: #676960;
   --line: rgba(20, 22, 19, 0.15);
   --lime: #d8ff5f;
-  --serif: "Iowan Old Style", "Baskerville", "Times New Roman", serif;
+  --serif: var(--font-newsreader), Georgia, serif;
   --font-geist-mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
   --background: var(--paper);
   --foreground: var(--ink);
