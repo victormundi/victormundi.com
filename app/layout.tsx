@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   metadataBase: siteUrl,
   title: "Jeroen Sakkers — Improve Every Day",
   description:
-    "Jeroen Sakkers is an Amsterdam entrepreneur and founder of HireData, building practical AI and thoughtful products to help people discover—and use—their superpower.",
+    "Jeroen Sakkers is an Amsterdam entrepreneur and founder of HireData, building products that learn through use and help people discover and develop their superpower.",
   applicationName: "Jeroen Sakkers",
   authors: [{ name: "Jeroen Sakkers", url: "https://victormundi.com" }],
   creator: "Jeroen Sakkers",
@@ -29,14 +29,14 @@ export const metadata: Metadata = {
     url: "/",
     title: "Jeroen Sakkers — Improve Every Day",
     description:
-      "Practical AI, thoughtful products and reliable systems that help people discover—and use—their superpower.",
+      "Products that turn feedback into learning and help people discover, develop and use their superpower.",
     siteName: "Jeroen Sakkers",
     images: [
       {
         url: socialImage,
         width: 1200,
         height: 630,
-        alt: "Jeroen Sakkers — Better systems. More human work.",
+        alt: "Jeroen Sakkers — Build. Learn. Improve.",
       },
     ],
   },
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     site: "@victormundi",
     title: "Jeroen Sakkers — Improve Every Day",
     description:
-      "Practical AI, thoughtful products and reliable systems that help people discover—and use—their superpower.",
+      "Products that turn feedback into learning and help people discover, develop and use their superpower.",
     images: [socialImage],
   },
 };

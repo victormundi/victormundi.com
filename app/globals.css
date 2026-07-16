@@ -523,11 +523,12 @@ img {
 }
 
 .capabilities li:not(:first-child)::before {
-  content: "•";
+  content: "→";
   color: var(--lime);
 }
 
 .mission-section {
+  scroll-margin-top: 88px;
   width: min(1260px, calc(100% - 48px));
   margin: 0 auto;
   padding: clamp(92px, 10vw, 154px) 0 clamp(54px, 7vw, 96px);
@@ -565,6 +566,14 @@ img {
   line-height: 1.72;
 }
 
+.mission-body > .mission-bridge {
+  color: var(--ink);
+  font-size: clamp(19px, 1.6vw, 23px);
+  font-weight: 650;
+  line-height: 1.48;
+  letter-spacing: -0.025em;
+}
+
 .mission-signals {
   margin: 38px 0 0;
   padding: 0;
@@ -592,6 +601,7 @@ img {
 }
 
 .work-section {
+  scroll-margin-top: 72px;
   padding: clamp(100px, 11vw, 180px) clamp(18px, 4vw, 68px);
 }
 
@@ -615,6 +625,14 @@ img {
   font-weight: 580;
   line-height: 0.98;
   letter-spacing: -0.06em;
+}
+
+.section-heading h2 em {
+  display: block;
+  margin-top: 0.1em;
+  color: #5c6d23;
+  font-family: var(--serif);
+  font-weight: 400;
 }
 
 .section-heading > p:last-child {
@@ -723,6 +741,35 @@ img {
   font-size: 16px;
   line-height: 1.62;
   letter-spacing: -0.015em;
+}
+
+.project-loop {
+  width: 100%;
+  margin: 23px 0 0;
+  padding: 13px 15px;
+  display: grid;
+  grid-template-columns: 108px minmax(0, 1fr);
+  gap: 14px;
+  align-items: center;
+  border-left: 3px solid #6f832d;
+  border-radius: 3px;
+  background: rgba(216, 255, 95, 0.18);
+}
+
+.project-loop span {
+  color: #61645b;
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 8px;
+  font-weight: 700;
+  line-height: 1.35;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.project-loop strong {
+  font-size: 12px;
+  line-height: 1.45;
+  letter-spacing: -0.01em;
 }
 
 .project-proof {
@@ -2182,22 +2229,18 @@ img {
     margin-top: 0;
   }
 
-  .project-sol .project-copy,
-  .project-yet .project-copy,
-  .project-sol .project-visual,
-  .project-yet .project-visual {
+  .project-card .project-copy,
+  .project-card .project-visual {
     grid-column: 1;
     grid-row: auto;
   }
 
-  .project-sol .project-copy,
-  .project-yet .project-copy {
-    order: 2;
+  .project-card .project-copy {
+    order: 1;
   }
 
-  .project-sol .project-visual,
-  .project-yet .project-visual {
-    order: 1;
+  .project-card .project-visual {
+    order: 2;
   }
 
   .practice-section {
@@ -2238,11 +2281,11 @@ img {
   }
 
   .site-header nav {
-    gap: 16px;
-    font-size: 11px;
+    gap: 11px;
+    font-size: 10px;
   }
 
-  .site-header nav a:nth-child(2) {
+  .site-header nav a:nth-child(3) {
     display: none;
   }
 
@@ -2270,16 +2313,13 @@ img {
   .hero-actions {
     width: 100%;
     margin-top: 20px;
+    gap: 14px;
     align-items: flex-start;
     flex-direction: column;
   }
 
   .hero-actions .button {
     width: 100%;
-  }
-
-  .hero-actions .text-link {
-    display: none;
   }
 
   .hero-card {
@@ -2421,6 +2461,20 @@ img {
     margin-top: 22px;
     font-size: 16px;
     line-height: 1.58;
+  }
+
+  .project-loop {
+    grid-template-columns: 1fr;
+    gap: 5px;
+    padding: 13px 14px;
+  }
+
+  .project-loop span {
+    font-size: 9px;
+  }
+
+  .project-loop strong {
+    font-size: 13px;
   }
 
   .project-visual {

@@ -10,7 +10,7 @@ const personJsonLd = {
   image: "https://victormundi.com/jeroen.png",
   jobTitle: "Founder & CEO of HireData",
   description:
-    "Amsterdam entrepreneur building practical AI and thoughtful products to help people discover and use their superpower.",
+    "Amsterdam entrepreneur building products that learn through use and help people discover and develop their superpower.",
   homeLocation: {
     "@type": "Place",
     name: "Amsterdam, The Netherlands",
@@ -30,6 +30,15 @@ const personJsonLd = {
 
 function ProjectMeta({ children }: { children: React.ReactNode }) {
   return <span className="project-meta">{children}</span>;
+}
+
+function ProjectLoop({ children }: { children: React.ReactNode }) {
+  return (
+    <p className="project-loop">
+      <span>Improvement loop</span>
+      <strong>{children}</strong>
+    </p>
+  );
 }
 
 function HireDataVisual() {
@@ -313,7 +322,7 @@ function CareerHighlight() {
             title="Jeroen Sakkers interviews then–Prime Minister Mark Rutte at Dag van de ZZP'er"
             loading="lazy"
             referrerPolicy="strict-origin-when-cross-origin"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
           />
           <div className="career-video-meta" aria-hidden="true">
@@ -433,7 +442,8 @@ export default function Home() {
           Jeroen Sakkers<span>.</span>
         </a>
         <nav aria-label="Main navigation">
-          <a href="#work">Work</a>
+          <a href="#mission">Mission</a>
+          <a href="#projects">Projects</a>
           <a href="#about">About</a>
           <a
             href="https://www.linkedin.com/in/victormundi/"
@@ -454,9 +464,26 @@ export default function Home() {
               <strong>Improve Every Day</strong>
             </p>
             <h1>
-              <span>Better systems.</span>
-              <em>More human work.</em>
+              <span>Build. Learn.</span>
+              <em>Improve.</em>
             </h1>
+          </div>
+
+          <div className="hero-support">
+            <p className="hero-intro">
+              I&apos;m an Amsterdam entrepreneur and founder of HireData. I build
+              products around a simple belief: progress compounds. My mission is to
+              help people discover their superpower—and create the systems,
+              feedback and space that help them keep improving it.
+            </p>
+            <div className="hero-actions">
+              <a className="button button-dark" href="#mission">
+                Start with the mission <span aria-hidden="true">↓</span>
+              </a>
+              <a className="text-link" href="#projects">
+                Explore the projects <span aria-hidden="true">↘</span>
+              </a>
+            </div>
           </div>
 
           <a
@@ -489,79 +516,68 @@ export default function Home() {
             <div className="hero-card-current">
               <span>NOW BUILDING</span>
               <p>
-                Practical AI that removes repetitive work so recruitment teams can
-                focus on candidates, clients and better decisions.
+                Self-improving systems that handle machine work so recruiters can
+                focus on judgment, relationships and better matches.
               </p>
             </div>
           </a>
-
-          <div className="hero-support">
-            <p className="hero-intro">
-              I&apos;m an Amsterdam entrepreneur and founder of HireData. My mission
-              is to help people discover their superpower—the work they do best—and
-              build systems that give them more room to use it.
-            </p>
-            <div className="hero-actions">
-              <a className="button button-dark" href="#work">
-                Explore selected work <span aria-hidden="true">↓</span>
-              </a>
-              <a
-                className="text-link"
-                href="https://www.linkedin.com/in/victormundi/"
-              >
-                Connect on LinkedIn <Arrow />
-              </a>
-            </div>
-          </div>
         </section>
 
-        <ul className="capabilities" aria-label="Areas of focus">
-          <li>People &amp; psychology</li>
-          <li>Entrepreneurship</li>
-          <li>AI &amp; automation</li>
-          <li>Reliable systems</li>
+        <ul className="capabilities" aria-label="The Improve Every Day loop">
+          <li>Listen</li>
+          <li>Learn</li>
+          <li>Build</li>
+          <li>Improve</li>
         </ul>
 
-        <section className="mission-section" aria-labelledby="mission-title">
+        <section
+          className="mission-section"
+          id="mission"
+          aria-labelledby="mission-title"
+        >
           <div className="mission-lead">
             <p className="eyebrow">
-              <span /> Mission
+              <span /> Mission · The why
             </p>
             <h2 id="mission-title">
               Helping people discover <em>their superpower.</em>
             </h2>
           </div>
           <div className="mission-body">
-            <p>
-              A superpower is not a slogan. It is the combination of strengths,
-              instincts and energy that appears when someone is doing their best
-              work.
+            <p className="mission-bridge">
+              Improve Every Day is the practice. Helping people discover their
+              superpower is the mission.
             </p>
             <p>
-              I start by asking questions and listening closely. Then I build away
-              the friction—using thoughtful products, practical AI and reliable
-              systems to create more room for people to contribute what is uniquely
-              theirs.
+              I start by listening, turn friction into feedback, and build systems
+              that learn through use. The point is not automation for its own sake.
+              It is to make the next decision better than the last—and help people
+              spend more time where their strengths compound.
             </p>
             <ul className="mission-signals" aria-label="How the mission becomes work">
               <li>Listen closely</li>
-              <li>Remove friction</li>
-              <li>Build to endure</li>
-              <li>Grow together</li>
+              <li>Make learning visible</li>
+              <li>Turn insight into action</li>
+              <li>Repeat &amp; improve</li>
             </ul>
           </div>
         </section>
 
-        <section className="work-section" id="work">
+        <section
+          className="work-section"
+          id="projects"
+          aria-labelledby="projects-title"
+        >
           <div className="section-heading">
             <p className="eyebrow">
-              <span /> Selected work · Five products
+              <span /> Selected projects · 01–05
             </p>
-            <h2>Products that create more room for people.</h2>
+            <h2 id="projects-title">
+              Different products. <em>One improvement loop.</em>
+            </h2>
             <p>
-              Across recruiting, language, relationships, wellbeing and AI
-              operations, I look for the friction that holds people back—and build
-              it away.
+              Each starts with a real friction point, turns feedback into learning,
+              and uses that learning to make the next action clearer.
             </p>
           </div>
 
@@ -575,11 +591,12 @@ export default function Home() {
               <h3>HireData</h3>
               <p className="project-role">Founder &amp; CEO · Product direction</p>
               <p className="project-description">
-                Recruiters do their best work when they can focus on candidates and
-                clients—not repetitive administration. HireData upgrades the ATS
-                with AI agents and automations, making communication more personal
-                and consistent while returning time to people.
+                HireData makes recruitment systems improve through use—automating
+                repetitive work, enriching candidate and role data, and giving
+                recruiters more time for judgment, relationships and the
+                conversations only humans can have.
               </p>
+              <ProjectLoop>Listen → enrich → automate → improve</ProjectLoop>
               <p className="project-proof">
                 <span>Current reach</span>
                 <strong>5,000+ recruiters · 10M+ tasks automated each year</strong>
@@ -614,6 +631,7 @@ export default function Home() {
                 start: Rafa brings warmth and precision to European Spanish; Hans
                 makes everyday Dutch calm, direct and useful.
               </p>
+              <ProjectLoop>Speak → get feedback → adjust → speak again</ProjectLoop>
               <ul className="project-points">
                 <li>Speaking before tapping through exercises</li>
                 <li>Quick prep for conversations that matter today</li>
@@ -638,6 +656,7 @@ export default function Home() {
                 turns a connection list into a private weekly ritual: three names
                 to recall and one warm reason to reconnect.
               </p>
+              <ProjectLoop>Recall → reconnect → strengthen</ProjectLoop>
               <ul className="project-points">
                 <li>Active recall instead of passive browsing</li>
                 <li>On-device face checks and local storage</li>
@@ -668,6 +687,7 @@ export default function Home() {
                 honest evidence into one useful next action without making growth
                 feel judgmental.
               </p>
+              <ProjectLoop>Capture → reflect → choose the next step</ProjectLoop>
               <ul className="project-points">
                 <li>Today, Add and Progress—nothing more</li>
                 <li>Personal data stays local by default</li>
@@ -693,6 +713,7 @@ export default function Home() {
                 steps and progress updates, while keeping consequential decisions
                 with people.
               </p>
+              <ProjectLoop>Observe → clarify → act → review</ProjectLoop>
               <ul className="project-points">
                 <li>Turns goals into traceable next steps</li>
                 <li>Keeps context and progress visible</li>
@@ -714,23 +735,21 @@ export default function Home() {
               <span /> About
             </p>
             <h2>
-              Help people find what they do best. Build around it.
+              Entrepreneurship is how I put the mission to work.
             </h2>
           </div>
           <div className="about-body">
             <p>
-              My mission is helping people discover their superpower—the strengths,
-              instincts and energy that appear when they are at their best. I start
-              by asking questions and listening closely, then turn what I learn into
-              products and systems that give people more clarity, capability and
-              time.
+              I co-founded Victor Mundi in 2009 and have spent the years since
+              turning real operational problems into products. That path led from
+              Ratecard and Dag van de ZZP&apos;er to HireData, where I now lead product
+              direction and company building.
             </p>
             <p>
-              Entrepreneurship is how I choose to create positive impact. Since
-              co-founding Victor Mundi in 2009, I have built B2B products in
-              recruitment technology, including Ratecard and HireData. I care about
-              practical AI, thoughtful user experience and dependable systems that
-              scale without losing the human connection that made them valuable.
+              The common thread is curiosity: ask better questions, listen, build a
+              simple first version, learn from real use and improve it. I value
+              growth, trust, honesty, reliability and partnerships built for the
+              long term.
             </p>
             <dl className="about-facts">
               <div>

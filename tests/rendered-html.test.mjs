@@ -34,8 +34,8 @@ test("server-renders the finished portfolio", async () => {
   const html = await response.text();
   assert.match(html, /<title>Jeroen Sakkers — Improve Every Day<\/title>/i);
   assert.match(html, /Improve Every Day/);
-  assert.match(html, /Better systems\./);
-  assert.match(html, /More human work\./);
+  assert.match(html, /Build\. Learn\./);
+  assert.match(html, /Improve\./);
   assert.match(html, /HireData/);
   assert.match(html, /Sol — Rafa &amp; Hans/);
   assert.match(html, /First Names/);
@@ -87,7 +87,11 @@ test("includes the public contact and product destinations", async () => {
   assert.match(html, /@jeroen_sakkers/);
   assert.match(html, /Helping people discover/i);
   assert.match(html, /their superpower/i);
-  assert.match(html, /Products that create more room for people/i);
+  assert.match(html, /Different products\./i);
+  assert.match(html, /One improvement loop\./i);
+  assert.match(html, /href="#mission"/);
+  assert.match(html, /href="#projects"/);
+  assert.doesNotMatch(html, /Products that create more room for people/i);
   assert.match(html, /Message me on LinkedIn/);
   assert.match(html, /https:\/\/github\.com\/victormundi/);
   assert.match(html, /https:\/\/www\.hiredata\.com\//);
