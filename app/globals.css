@@ -1505,97 +1505,130 @@ img {
   text-transform: uppercase;
 }
 
-.career-section {
+.milestones-section {
   position: relative;
   width: min(1400px, calc(100% - 36px));
   margin: 0 auto clamp(86px, 10vw, 150px);
-  padding: clamp(42px, 6vw, 88px);
+  padding: clamp(42px, 5.8vw, 82px);
   overflow: hidden;
+  color: rgba(255, 255, 255, 0.94);
   border-radius: 8px;
   background:
-    radial-gradient(circle at 92% 4%, rgba(255, 255, 255, 0.72), transparent 26%),
-    linear-gradient(135deg, #d8ff5f 0%, #e8f9b6 58%, #f4f1e9 100%);
-  box-shadow: 0 28px 80px rgba(20, 22, 19, 0.14);
+    radial-gradient(circle at 92% 3%, rgba(216, 255, 95, 0.14), transparent 28%),
+    linear-gradient(145deg, #10120f, #1a1d18);
+  box-shadow: 0 30px 86px rgba(20, 22, 19, 0.2);
+  scroll-margin-top: 92px;
 }
 
-.career-section::before {
-  content: "2015";
+.milestones-section::before {
+  content: "2014—19";
   position: absolute;
+  top: -0.25em;
   right: -0.02em;
-  top: -0.28em;
-  color: rgba(20, 22, 19, 0.055);
+  color: rgba(255, 255, 255, 0.035);
   font-family: var(--serif);
-  font-size: clamp(180px, 28vw, 430px);
+  font-size: clamp(150px, 23vw, 340px);
   font-style: italic;
   line-height: 1;
   pointer-events: none;
 }
 
-.career-heading,
-.career-stage {
+.milestones-heading,
+.milestone,
+.milestone-pair {
   position: relative;
   z-index: 1;
 }
 
-.career-heading {
-  max-width: 1120px;
+.milestones-heading {
+  padding-bottom: clamp(42px, 5vw, 68px);
+  display: grid;
+  grid-template-columns: minmax(0, 1.18fr) minmax(300px, 0.62fr);
+  gap: clamp(42px, 7vw, 96px);
+  align-items: end;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 }
 
-.career-heading h2 {
-  max-width: 1060px;
+.milestones-heading h2 {
+  max-width: 880px;
   margin: 0;
-  font-size: clamp(50px, 6.4vw, 92px);
+  font-size: clamp(52px, 6.2vw, 88px);
   font-weight: 590;
-  line-height: 0.94;
+  line-height: 0.92;
   letter-spacing: -0.065em;
 }
 
-.career-heading h2 em {
+.milestones-heading h2 em {
   display: block;
-  margin-top: 0.1em;
+  margin-top: 0.12em;
+  color: var(--lime);
   font-family: var(--serif);
   font-weight: 400;
 }
 
-.career-stage {
-  margin-top: clamp(46px, 6vw, 82px);
+.milestones-heading > p {
+  max-width: 450px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.68);
+  font-size: clamp(16px, 1.35vw, 19px);
+  line-height: 1.65;
+  letter-spacing: -0.018em;
+}
+
+.milestone {
+  min-width: 0;
+  overflow: hidden;
+  color: var(--ink);
+  border-radius: 6px;
+  background: var(--paper);
+}
+
+.milestone-exit {
+  margin-top: clamp(34px, 4vw, 54px);
   display: grid;
-  grid-template-columns: minmax(0, 1.22fr) minmax(320px, 0.78fr);
-  gap: clamp(38px, 6vw, 86px);
-  align-items: start;
+  grid-template-columns: minmax(380px, 0.92fr) minmax(0, 1.08fr);
+  background: var(--lime);
 }
 
-.career-video iframe {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  display: block;
-  border: 7px solid #151713;
-  border-radius: 5px;
-  background: #151713;
-  box-shadow: 0 24px 58px rgba(20, 22, 19, 0.25);
+.milestone-copy {
+  padding: clamp(34px, 4vw, 58px);
 }
 
-.career-video-meta {
-  margin-top: 13px;
-  display: flex;
-  justify-content: space-between;
-  gap: 18px;
-  color: rgba(20, 22, 19, 0.62);
+.milestone-label {
+  margin: 0 0 26px;
   font-family: var(--font-geist-mono), monospace;
-  font-size: 9px;
-  letter-spacing: 0.07em;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
 }
 
-.career-story > p {
-  margin: 0 0 20px;
-  color: #34372f;
-  font-size: 16px;
-  line-height: 1.68;
+.milestone h3 {
+  max-width: 700px;
+  margin: 0 0 28px;
+  font-size: clamp(42px, 4.8vw, 68px);
+  font-weight: 620;
+  line-height: 0.94;
+  letter-spacing: -0.06em;
+  text-wrap: balance;
 }
 
-.career-facts {
-  margin: 34px 0;
+.milestone-copy > p:not(.milestone-label) {
+  max-width: 650px;
+  margin: 0 0 18px;
+  color: #45483f;
+  font-size: 16px;
+  line-height: 1.65;
+  letter-spacing: -0.015em;
+}
+
+.milestone-copy .milestone-note {
+  padding-top: 18px;
+  border-top: 1px solid rgba(20, 22, 19, 0.15);
+}
+
+.milestone-facts {
+  margin: 32px 0 18px;
   padding: 0;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -1603,52 +1636,149 @@ img {
   border-bottom: 1px solid rgba(20, 22, 19, 0.2);
 }
 
-.career-facts > div {
+.milestone-facts > div {
   min-width: 0;
-  padding: 20px 14px 22px 0;
+  padding: 19px 12px 20px 0;
 }
 
-.career-facts > div + div {
-  padding-left: 14px;
+.milestone-facts > div + div {
+  padding-left: 12px;
   border-left: 1px solid rgba(20, 22, 19, 0.16);
 }
 
-.career-facts dt {
-  font-size: clamp(22px, 2.4vw, 36px);
-  font-weight: 720;
+.milestone-facts dt {
+  font-size: clamp(20px, 2.15vw, 31px);
+  font-weight: 730;
+  line-height: 1;
   letter-spacing: -0.05em;
 }
 
-.career-facts dd {
+.milestone-facts dd {
   margin: 7px 0 0;
   color: rgba(20, 22, 19, 0.64);
-  font-size: 10px;
+  font-size: 9px;
   line-height: 1.45;
 }
 
-.career-next-chapter {
-  padding-top: 20px;
-  border-top: 1px solid rgba(20, 22, 19, 0.18);
-}
-
-.career-link {
+.milestone-link {
   min-height: 44px;
-  margin-top: 4px;
   display: inline-flex;
   align-items: center;
   gap: 9px;
   border-bottom: 1px solid currentColor;
   font-size: 13px;
-  font-weight: 750;
+  font-weight: 740;
 }
 
-.career-link span {
+.milestone-link span {
   transition: transform 180ms ease;
 }
 
-.career-link:hover span,
-.career-link:focus-visible span {
+.milestone-link:hover span,
+.milestone-link:focus-visible span {
   transform: translate(3px, -3px);
+}
+
+.milestone-figure {
+  min-width: 0;
+  margin: 0;
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) auto;
+  background: #111;
+}
+
+.milestone-figure img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.milestone-exit-figure {
+  min-height: 610px;
+}
+
+.milestone-exit-figure img {
+  object-position: center center;
+}
+
+.milestone-figure figcaption,
+.milestone-video-meta {
+  min-height: 42px;
+  padding: 12px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  color: rgba(255, 255, 255, 0.68);
+  background: #111;
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 8px;
+  letter-spacing: 0.075em;
+  text-transform: uppercase;
+}
+
+.milestone-pair {
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: minmax(0, 0.86fr) minmax(0, 1.14fr);
+  gap: 24px;
+  align-items: stretch;
+}
+
+.milestone-bnr,
+.milestone-rutte {
+  display: flex;
+  flex-direction: column;
+}
+
+.milestone-bnr h3,
+.milestone-rutte h3 {
+  font-size: clamp(40px, 4.25vw, 61px);
+}
+
+.milestone-bnr-figure {
+  margin-top: auto;
+}
+
+.milestone-bnr-figure img {
+  aspect-ratio: 800 / 533;
+}
+
+.milestone-rutte {
+  background:
+    radial-gradient(circle at 88% 4%, rgba(255, 255, 255, 0.68), transparent 28%),
+    linear-gradient(140deg, #d8ff5f, #eef6d5 72%);
+}
+
+.milestone-rutte .milestone-copy {
+  padding-bottom: 28px;
+}
+
+.milestone-video {
+  margin-top: auto;
+  padding: 0 clamp(30px, 4vw, 58px) clamp(34px, 4vw, 54px);
+}
+
+.milestone-video iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  display: block;
+  border: 6px solid #151713;
+  border-radius: 4px;
+  background: #151713;
+  box-shadow: 0 22px 52px rgba(20, 22, 19, 0.22);
+}
+
+.milestone-video-meta {
+  min-height: 0;
+  padding: 11px 0 0;
+  color: rgba(20, 22, 19, 0.6);
+  background: transparent;
+}
+
+.milestone-video .milestone-link {
+  margin-top: 17px;
 }
 
 .practice-section {
@@ -1788,6 +1918,7 @@ img {
   grid-template-columns: 1.1fr 0.9fr;
   gap: clamp(60px, 10vw, 150px);
   border-top: 1px solid var(--line);
+  scroll-margin-top: 96px;
 }
 
 .about-lead h2 {
@@ -1799,10 +1930,6 @@ img {
   font-weight: 400;
   line-height: 1.02;
   letter-spacing: -0.045em;
-}
-
-.about-lead {
-  scroll-margin-top: 96px;
 }
 
 .about-body {
@@ -2248,12 +2375,33 @@ img {
     gap: 52px;
   }
 
-  .career-stage {
+  .milestones-heading {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .milestones-heading > p {
+    max-width: 640px;
+  }
+
+  .milestone-exit {
     grid-template-columns: 1fr;
   }
 
-  .career-story {
-    max-width: 680px;
+  .milestone-exit-figure {
+    min-height: 0;
+  }
+
+  .milestone-exit-figure img {
+    aspect-ratio: 3 / 2;
+  }
+
+  .milestone-pair {
+    grid-template-columns: 1fr;
+  }
+
+  .milestone-bnr-figure img {
+    aspect-ratio: auto;
   }
 
   .practice-media {
@@ -2285,7 +2433,8 @@ img {
     font-size: 10px;
   }
 
-  .site-header nav a:nth-child(3) {
+  .site-header nav a:nth-child(1),
+  .site-header nav a:nth-child(4) {
     display: none;
   }
 
@@ -2660,47 +2809,87 @@ img {
     border-radius: 5px;
   }
 
-  .career-section {
+  .milestones-section {
     width: calc(100% - 20px);
     margin-bottom: 88px;
     padding: 44px 16px;
     border-radius: 5px;
   }
 
-  .career-heading h2 {
-    font-size: clamp(43px, 12.8vw, 60px);
+  .milestones-section::before {
+    top: 0.18em;
+    font-size: 44vw;
   }
 
-  .career-stage {
-    margin-top: 42px;
-    gap: 36px;
+  .milestones-heading {
+    padding-bottom: 34px;
+    gap: 22px;
   }
 
-  .career-video iframe {
-    border-width: 4px;
+  .milestones-heading h2 {
+    font-size: clamp(43px, 12.5vw, 58px);
   }
 
-  .career-video-meta {
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 5px;
-    font-size: 8px;
+  .milestones-heading > p {
+    font-size: 16px;
   }
 
-  .career-facts > div {
+  .milestone-exit {
+    margin-top: 22px;
+  }
+
+  .milestone-copy {
+    padding: 30px 20px;
+  }
+
+  .milestone-label {
+    margin-bottom: 20px;
+  }
+
+  .milestone h3,
+  .milestone-bnr h3,
+  .milestone-rutte h3 {
+    font-size: clamp(38px, 11.4vw, 52px);
+  }
+
+  .milestone-facts {
+    margin-top: 28px;
+  }
+
+  .milestone-facts > div {
     padding-right: 8px;
   }
 
-  .career-facts > div + div {
+  .milestone-facts > div + div {
     padding-left: 8px;
   }
 
-  .career-facts dt {
-    font-size: clamp(21px, 7vw, 30px);
+  .milestone-facts dt {
+    font-size: clamp(20px, 6.7vw, 27px);
   }
 
-  .career-facts dd {
+  .milestone-facts dd {
     font-size: 9px;
+  }
+
+  .milestone-figure figcaption,
+  .milestone-video-meta {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .milestone-pair {
+    margin-top: 12px;
+    gap: 12px;
+  }
+
+  .milestone-video {
+    padding: 0 20px 30px;
+  }
+
+  .milestone-video iframe {
+    border-width: 4px;
   }
 
   .practice-media {

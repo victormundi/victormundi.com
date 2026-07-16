@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist } from "next/font/google";
 import "./globals.css";
+import "./editorial.css";
 
 const siteUrl = new URL("https://victormundi.com");
 const socialImage = new URL("/og.jpg", siteUrl).toString();
@@ -12,13 +13,24 @@ const geistSans = Geist({
 
 export const metadata: Metadata = {
   metadataBase: siteUrl,
-  title: "Jeroen Sakkers — Improve Every Day",
+  title: "Jeroen Sakkers — Founder of HireData | Improve Every Day",
   description:
-    "Jeroen Sakkers is an Amsterdam entrepreneur and founder of HireData, building products that learn through use and help people discover and develop their superpower.",
+    "Jeroen Sakkers is the Amsterdam founder of HireData. Explore his AI products, BNR Nieuwsradio work, 2,000-person event and 2019 portfolio exit.",
   applicationName: "Jeroen Sakkers",
   authors: [{ name: "Jeroen Sakkers", url: "https://victormundi.com" }],
   creator: "Jeroen Sakkers",
   alternates: { canonical: "/" },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
   icons: {
     icon: "/jeroen.png",
     shortcut: "/jeroen.png",
@@ -27,16 +39,16 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: "/",
-    title: "Jeroen Sakkers — Improve Every Day",
+    title: "Jeroen Sakkers — Founder of HireData | Improve Every Day",
     description:
-      "Products that turn feedback into learning and help people discover, develop and use their superpower.",
+      "Founder of HireData. Building AI products, communities and systems around one principle: Improve Every Day.",
     siteName: "Jeroen Sakkers",
     images: [
       {
         url: socialImage,
         width: 1200,
         height: 630,
-        alt: "Jeroen Sakkers — Build. Learn. Improve.",
+        alt: "Jeroen Sakkers, founder of HireData — Improve Every Day",
       },
     ],
   },
@@ -44,9 +56,9 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     creator: "@victormundi",
     site: "@victormundi",
-    title: "Jeroen Sakkers — Improve Every Day",
+    title: "Jeroen Sakkers — Founder of HireData | Improve Every Day",
     description:
-      "Products that turn feedback into learning and help people discover, develop and use their superpower.",
+      "Founder of HireData. Building AI products, communities and systems around one principle: Improve Every Day.",
     images: [socialImage],
   },
 };
